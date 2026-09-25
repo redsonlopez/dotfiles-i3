@@ -5,11 +5,12 @@
 
 # I3
 sudo pacman -S base-devel brightnessctl dmenu feh git \
-gnu-free-fonts i3-wm i3status kitty neovim less ripgrep scrot openssh tlp tree \
+gnu-free-fonts gpu-screen-recorder i3-wm i3status kitty mpv \
+neovim less ripgrep scrot openssh tlp tree \
 ttf-firacode-nerd ttf-nerd-fonts-symbols xclip xorg-server xorg-xinit \
 xorg-xrandr xorg-xsetroot \
 pipewire pipewire-pulse wireplumber alsa-utils alsa-ucm-conf sof-firmware rtkit \
-intel-ucode mesa vulkan-intel
+intel-media-driver intel-ucode mesa vulkan-intel
 #sudo pacman -S alacritty gnome-themes-extra mpc mpd polybar
 
 # Debian Packages
@@ -22,6 +23,7 @@ intel-ucode mesa vulkan-intel
 #sof-firmware rtkit mesa-vulkan-drivers intel-microcode \
 #gnome-themes-extra kitty mpc mpd polybar
 
+LIBVA_DRIVER_NAME=iHD
 sudo systemctl enable tlp.service
 fc-cache -fv
 echo "exec i3" > ~/.xinitrc
