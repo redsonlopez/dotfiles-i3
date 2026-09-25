@@ -57,7 +57,11 @@ volume master {
 }
 
 battery all {
-	format = " %percentage"
+	format = "%status %percentage"
+	status_chr  = ""   # carregando
+	status_bat  = ""   # descarregando (rodando na bateria)
+	status_full = ""   # totalmente carregada
+	status_unk  = ""   # estado desconhecido
   low_threshold = 20
   threshold_type = "percentage"
 }
